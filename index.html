@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our 3 Years ♡</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Georgia,serif;
+ background:linear-gradient(160deg,#fff0f5,#ffe1ec,#fff7f9);
+ color:#713b50;text-align:center;
+ min-height:100vh;overflow-x:hidden
+}
+section{padding:45px 20px;max-width:650px;margin:auto}
+h1{font-size:clamp(32px,8vw,52px);color:#c34e7b}
+h2{color:#bd527b}
+p{font-size:17px;line-height:1.9}
+button{
+ border:0;border-radius:30px;padding:14px 23px;
+ background:#d65b89;color:white;font-size:16px;
+ cursor:pointer;margin:8px
+}
+.card{
+ background:#ffffffbd;border:1px solid #ffd0df;
+ padding:24px;border-radius:24px;margin:22px 0;
+ box-shadow:0 8px 25px #b95b7b18
+}
+.heart{position:fixed;bottom:-30px;animation:float 7s linear infinite;
+ pointer-events:none;z-index:0}
+@keyframes float{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+#letter{display:none;white-space:pre-line}
+#promise{display:none}
+.envelope{font-size:75px;margin:20px}
+.small{font-size:13px;color:#a66c82}
+</style>
+</head>
+<body>
+<section>
+<p>♡ NOVEMBER 1 • OUR SPECIAL DAY ♡</p>
+<h1>Happy 3rd Anniversary!</h1>
+<div class="envelope">💌</div>
+<h2>For my cutest girl, my Pondati 🎀</h2>
+<p>Three years ago, one little conversation became a beautiful part of my life.</p>
+<button onclick="openLetter()">Open your surprise 💗</button>
+<div id="letter" class="card">
+<h2>En Pondati, ❤️</h2>
+Happy 3rd anniversary diii! 🥹💗
+
+November 1, around 4:24 PM...
+I still remember when you asked me whether I was your friend. I said yes, and then you told me we could be lovers. Maybe you might forget that moment, but I will always keep it in my heart. 🎀
+
+Our school memories, our little conversations, our smiles and even the difficult moments mean so much to me.
+
+Un kooda pesura ovvoru moment-um enakku special dii. Nee happy-ah irukkuradha paathale enakku romba sandhosham. ❤️
+
+Namma relationship perfect-ah irukkanum nu illa. Sanda vandhaalum, misunderstandings vandhaalum, namma honest-ah pesi oruthara oruthar purinjukkanum.
+
+Un dreams-ku support-ah irukkanum, un happiness-ah celebrate pannanum, un feelings-ku value kudukkanum nu aasai dii. 🫂🌷
+
+Nee neeyah irukkuradhukke enakku romba special. Un sirippu, un cute habits, un way of talking ellame enakku pudikkum!
+
+I LOVE YOU SO MUCHHH DI EN PONDATIII! 💗♾️
+
+Forever your Thangamana Paiyan. 💙
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>Our Little Timeline 🌷</h2>
+<p>🎀 Year 1 — A beautiful beginning</p>
+<p>💗 Year 2 — More memories together</p>
+<p>♾️ Year 3 — Still choosing kindness and understanding</p>
+<p class="small">Add your own favourite memories to these lines!</p>
+</div>
+<div class="card">
+<h2>One little promise 🤍</h2>
+<p>Whatever changes life brings, I will try to listen, understand, encourage you and celebrate your achievements. Let's keep growing with honesty, patience and care.</p>
+<button onclick="reveal()">Read my final message 🥹</button>
+<p id="promise">You will always be a precious part of my story. Happy anniversary, my favourite person! 💗🎀🌙</p>
+</div>
+<p>Made with love, just for you ♡</p>
+</section>
+
+<script>
+function openLetter(){
+ document.getElementById('letter').style.display='block';
+ document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function reveal(){
+ document.getElementById('promise').style.display='block';
+}
+for(let i=0;i<16;i++){
+ let h=document.createElement('span');
+ h.className='heart';h.textContent=['♡','💗','💕','🎀'][i%4];
+ h.style.left=Math.random()*100+'%';
+ h.style.animationDelay=Math.random()*7+'s';
+ h.style.fontSize=(15+Math.random()*18)+'px';
+ document.body.appendChild(h);
+}
+</script>
+</body>
+  </html>
