@@ -7,197 +7,183 @@
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;min-height:100vh;font-family:Georgia,serif;
- background:linear-gradient(145deg,#ffe5ef,#fff0f5,#f8d5e4);
- color:#74334e;text-align:center;
+ margin:0;min-height:100vh;
+ font-family:Georgia,serif;
+ color:#74364f;
+ background:linear-gradient(145deg,#ffe5ed,#fff5f7,#fbd4e2);
+ text-align:center;
 }
-#app{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px}
+#app{
+ min-height:100vh;display:flex;
+ align-items:center;justify-content:center;
+ padding:24px 15px;
+}
 .screen{
  display:none;width:100%;max-width:480px;
- animation:appear .65s ease;
+ animation:show .6s ease;
 }
 .screen.active{display:block}
-@keyframes appear{
+@keyframes show{
  from{opacity:0;transform:translateY(18px)}
  to{opacity:1;transform:translateY(0)}
 }
-.card{
- background:#ffffffbd;padding:28px 22px;border-radius:25px;
- box-shadow:0 12px 35px #ad58752b;border:1px solid #ffffff;
-}
-.emoji{font-size:55px;margin:12px}
-h1{font-size:clamp(29px,8vw,42px);margin:15px 0}
-h2{font-size:27px}
+h1{font-size:clamp(30px,8vw,43px);margin:15px 0}
+h2{font-size:29px}
 p{font-size:17px;line-height:1.8}
+.small{font-size:14px;color:#a66b80}
+.photo{
+ width:100%;max-height:430px;object-fit:cover;
+ border-radius:20px;border:5px solid white;
+ box-shadow:0 8px 25px #bd789344;
+ margin:12px 0;
+}
 button{
- border:0;border-radius:30px;padding:14px 25px;margin:9px 4px;
- background:#c64f7c;color:white;font-size:16px;
- cursor:pointer;box-shadow:0 5px 12px #c64f7c30;
+ border:0;border-radius:30px;padding:14px 27px;
+ margin:10px;background:#e77b9f;color:white;
+ font-size:17px;font-weight:bold;
+ box-shadow:0 5px 12px #b65d7c44;
+ cursor:pointer;
 }
-button:active{transform:scale(.97)}
-.secondary{background:#fff;color:#a43c67;border:1px solid #e9b1c8}
-.small{font-size:13px;opacity:.75}
+button:active{transform:scale(.96)}
+.secondary{background:#b97891}
+.card{
+ background:#ffffffc9;border:1px solid #f4c5d5;
+ border-radius:22px;padding:22px;
+ box-shadow:0 8px 25px #bd789322;
+}
+.progress{margin:8px auto 22px;color:#b56c87;font-size:14px}
+.heart{font-size:40px}
 .letter{
- display:none;background:#fff9fc;padding:20px;border-radius:18px;
- margin-top:18px;text-align:left;line-height:1.9;white-space:pre-line;
+ display:none;text-align:left;white-space:pre-line;
+ line-height:1.9;font-size:16px;
 }
-.letter.show{display:block;animation:appear .7s ease}
-.progress{font-size:13px;letter-spacing:3px;margin-bottom:14px}
-.heart{position:fixed;bottom:-30px;animation:float 6s linear infinite;pointer-events:none;z-index:0}
-@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
-.card,button{position:relative;z-index:1}
+.letter.open{display:block}
+.gallery img{margin-bottom:17px}
+footer{font-size:13px;color:#b4778c;margin-top:20px}
 </style>
 </head>
 <body>
 <div id="app">
 
 <section class="screen active">
-<div class="card">
-<div class="emoji">🎀💗</div>
-<div class="progress">01 / 06</div>
-<p>A little surprise made with all my love...</p>
-<h1>Hey, En Pondati! ❤️</h1>
-<p>Unakkaga oru chinna world create panniruken. Every screen-layum namma love oda oru part irukku.</p>
-<p>Ready ah, en chellam? 🥹</p>
-<button onclick="next()">Let's Begin 💌 →</button>
-</div>
+ <div class="progress">A LITTLE JOURNEY FOR YOU · 1 / 6</div>
+ <div class="heart">💗</div>
+ <h1>Hey, En Pondati!</h1>
+ <img class="photo" src="file_00000000a6847207970824541fc89e50.png" alt="Our anime couple">
+ <p>I've made a little something for you.<br>
+ Six little moments, one special person.</p>
+ <p class="small">Ready to open your surprise?</p>
+ <button onclick="next()">Let's begin ❤️</button>
 </section>
 
 <section class="screen">
-<div class="card">
-<div class="progress">02 / 06</div>
-<div class="emoji">🕰️💞</div>
-<h1>Our Beginning</h1>
-<h2>November 1 · 4:24 PM</h2>
-<p>Andha oru conversation namma life-la ivlo special aagum nu appo theriyala...</p>
-<p>“Are you my friend?” nu start aana namma story, inniku three years of memories-ah maarirukku. ❤️</p>
-<p>Oru small beginning. Aana en heart-ku romba periya story.</p>
-<button onclick="next()">Our Love Letter 💌 →</button>
-</div>
+ <div class="progress">OUR BEGINNING · 2 / 6</div>
+ <div class="card">
+  <div class="heart">🌷</div>
+  <h1>It started with a hello...</h1>
+  <h2>November 1 · 4:24 PM</h2>
+  <img class="photo" src="file_00000000e7107206ae21484882f23381.png" alt="Together by the window">
+  <p>Who would've thought that one little conversation would become such a special part of our lives?</p>
+  <p>From that first "Are you my friend?" to everything we've shared since then... I'm glad our paths crossed.</p>
+ </div>
+ <button onclick="next()">Next memory 💌</button>
 </section>
 
 <section class="screen">
-<div class="card">
-<div class="progress">03 / 06</div>
-<div class="emoji">💌</div>
-<h1>For My Favourite Person</h1>
-<p>Unakkaga ezhudhunadhu... un heart varaikkum poganum. 💗</p>
-<button onclick="revealLetter()">Open My Letter 💖</button>
-<div class="letter" id="letter">En pondati, ❤️
+ <div class="progress">A LETTER FOR YOU · 3 / 6</div>
+ <div class="card">
+  <div class="heart">💌</div>
+  <h1>Something from my heart</h1>
+  <p>I've written something just for you.</p>
+  <button id="letterButton" onclick="openLetter()">Open my letter</button>
+  <div class="letter" id="letter">
+En pondati ❤️
 
-Happy 3 years of us, en chellam!
+Three years... and still, there are so many little things about you that make my days special.
 
-Nee en life-la vandhadhula irundhu, chinna chinna moments kooda enakku special aayiduchu. Un kooda pesuradhu, un message-ku wait panradhu, namma memories-a nenachu smile panradhu — idhellam enakku romba precious.
+Un kooda pesura simple moments kooda enakku romba precious. Sometimes namma normal-ah pesuvom, sometimes silly-ah argue pannuvom, sometimes words eh kidaikkadhu. But every little moment has its own place in my heart.
 
-Namma eppovume perfect-ah irukkanum nu illa. Sandhosham irundhaalum, kashtam irundhaalum, orutharoda feelings-ah innoruthar purinjukka try pannuvom.
+Nee sometimes unna unlucky nu nenachukitta, please remember this: you don't have to be perfect to be important. Un feelings-um, un smile-um, un little habits-um ellame matter aagum.
 
-Unna sirikka vekkanum, un feelings-ah respect pannanum, unakku support-ah irukkanum nu naan aasai padren.
+Naan unakku always happy moments mattum kudukka mudiyum nu promise panna maaten. Aana un feelings-ah listen panna, unakku support-ah irukka, and namma bond-ah care panna try pannuvaen.
 
-Three years is a beautiful beginning of our story. Namma bond-a love-oda, patience-oda, understanding-oda grow pannuvom.
+Thank you for being part of my story. Innum neraya memories create pannalaam.
 
-Thank you for being a special part of my life.
+Happy 3 years, my favourite person. ❤️
 
-I love you so much, en pondati! ❤️🥹
-
-— Un chellam 💗</div>
-<button onclick="next()">Our Memories 📸 →</button>
-</div>
+— Yours, always cheering for you.
+  </div>
+ </div>
+ <button onclick="next()">Next surprise 🌸</button>
 </section>
 
 <section class="screen">
-<div class="card">
-<div class="progress">04 / 06</div>
-<div class="emoji">🌷🧸</div>
-<h1>Our Little Memories</h1>
-<p>Some moments become memories. Some people become home. For me, nee rendu-ume. ❤️</p>
-<div style="background:#fff5f9;border-radius:18px;padding:16px;margin:12px 0">
-<h2>💗 Our First Conversation</h2>
-<p>Oru simple conversation-la start aana namma beautiful story.</p>
-</div>
-<div style="background:#fff5f9;border-radius:18px;padding:16px;margin:12px 0">
-<h2>🥹 Our Little Moments</h2>
-<p>Namma talks, namma smiles, namma silly moments — enakku ellame precious.</p>
-</div>
-<div style="background:#fff5f9;border-radius:18px;padding:16px;margin:12px 0">
-<h2>💞 Three Years of Us</h2>
-<p>Every memory has a little piece of my heart in it.</p>
-</div>
-<button onclick="next()">My Promises 🤞 →</button>
-</div>
+ <div class="progress">OUR LITTLE GALLERY · 4 / 6</div>
+ <h1>Little moments, big smiles</h1>
+ <p>Every picture tells its own tiny story. 💗</p>
+ <div class="gallery">
+  <img class="photo" src="file_00000000a6847207970824541fc89e50.png" alt="Evening lights">
+  <p>Under the evening lights ✨</p>
+  <img class="photo" src="file_00000000e7107206ae21484882f23381.png" alt="Window memory">
+  <p>Two people, one beautiful view 🌙</p>
+  <img class="photo" src="file_0000000070f87208870847f48cd675ab.png" alt="Beach memory">
+  <p>A sunset worth remembering 🌅</p>
+  <img class="photo" src="file_0000000071e872088b15b09b37180d4d.png" alt="Cute couple">
+  <p>Our cute little cartoon moment 🥹</p>
+ </div>
+ <button onclick="next()">One more! 🍫</button>
 </section>
 
 <section class="screen">
-<div class="card">
-<div class="progress">05 / 06</div>
-<div class="emoji">🤞❤️</div>
-<h1>My Promises to You</h1>
-<p>Periya periya promises vida, daily chinna chinna actions-la unakku en love-ah kaattanum nu aasai.</p>
-<button onclick="revealPromise()">Read My Promises 💗</button>
-<div class="letter" id="promises">🌷 Un feelings-ah listen panna try pannuven.
-
-🌷 Unna respect pannuvேன்; un space-um important.
-
-🌷 Problems vandha, blame panradhukku badhila pesi purinjukka try pannuvom.
-
-🌷 Un happiness mattum illa, un kashtathulayum support-ah irukka try pannuven.
-
-🌷 Namma relationship-ah rendu perum serndhu care pannuvom.
-
-Most importantly, namma rendu perum namma-va irundhu, love-um understanding-um grow pannuvom. ❤️</div>
-<button onclick="next()">One Last Surprise 🎁 →</button>
-</div>
+ <div class="progress">A LITTLE CHOCOLATE DRAMA · 5 / 6</div>
+ <div class="card">
+  <div class="heart">🍫</div>
+  <h1>Chocolate pleaseee!</h1>
+  <img class="photo" src="file_000000001b5471fa9db2f4f1d7167b96.png" alt="Chocolate moment">
+  <p>Un chocolate requests-ku oru separate budget venum pola! 😂</p>
+  <p>But seriously, I hope life gives you countless little reasons to smile.</p>
+ </div>
+ <button onclick="next()">Final surprise ❤️</button>
 </section>
 
 <section class="screen">
-<div class="card">
-<div class="progress">06 / 06</div>
-<div class="emoji">🎂💖🧸</div>
-<h1>Happy 3rd Anniversary!</h1>
-<h2>Three Years. One Beautiful Story. ❤️</h2>
-<p>En pondati, namma story-la idhu oru beautiful chapter mattum dhaan. Innum neraya smiles, memories, understanding, happiness ellam serndhu create pannuvom.</p>
-<p>Unakku indha little website pudichirundha, adhuve enakku periya happiness. 🥹</p>
-<div class="emoji">💗 ∞ 💗</div>
-<h2>I Love You, En Pondati!</h2>
-<p>Forever in this moment, and choosing kindness and love every day. 💌</p>
-<button onclick="celebrate()">Tap for More Love 💕</button>
-<p id="finalMessage"></p>
-<button class="secondary" onclick="goTo(0)">↻ Start Our Story Again</button>
-</div>
+ <div class="progress">JUST FOR YOU · 6 / 6</div>
+ <div class="card">
+  <div class="heart">💖</div>
+  <h1>Happy 3 Years!</h1>
+  <img class="photo" src="file_00000000a6847207970824541fc89e50.png" alt="Our special memory">
+  <h2>To more smiles and memories...</h2>
+  <p>Three years of conversations, little arguments, laughter, learning and growing.</p>
+  <p>Whatever new chapters come, I hope we keep choosing kindness, understanding and happiness.</p>
+  <h2>You're a special part of my story. ❤️</h2>
+  <p class="heart">🌷 💗 🌷</p>
+  <button onclick="restart()">Read it all again ↺</button>
+ </div>
+ <footer>Made with love, just for you.</footer>
 </section>
 
 </div>
 <script>
 let current=0;
-const screens=document.querySelectorAll('.screen');
+const screens=document.querySelectorAll(".screen");
 
-function goTo(index){
- screens[current].classList.remove('active');
+function showScreen(index){
+ screens[current].classList.remove("active");
  current=index;
- screens[current].classList.add('active');
- window.scrollTo({top:0,behavior:'smooth'});
+ screens[current].classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
 }
 function next(){
- if(current<screens.length-1)goTo(current+1);
+ if(current<screens.length-1)showScreen(current+1);
 }
-function revealLetter(){
- document.getElementById('letter').classList.add('show');
+function restart(){
+ document.getElementById("letter").classList.remove("open");
+ document.getElementById("letterButton").style.display="inline-block";
+ showScreen(0);
 }
-function revealPromise(){
- document.getElementById('promises').classList.add('show');
-}
-function celebrate(){
- document.getElementById('finalMessage').textContent=
- 'A thousand little hearts for you! 💗 Happy Anniversary, my favourite person! 💗';
- for(let i=0;i<18;i++){
-  const heart=document.createElement('div');
-  heart.className='heart';
-  heart.textContent=['💗','💕','💖','❤️'][i%4];
-  heart.style.left=Math.random()*95+'vw';
-  heart.style.animationDelay=Math.random()*2+'s';
-  heart.style.fontSize=(18+Math.random()*20)+'px';
-  document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),6500);
- }
+function openLetter(){
+ document.getElementById("letter").classList.add("open");
+ document.getElementById("letterButton").style.display="none";
 }
 </script>
 </body>
